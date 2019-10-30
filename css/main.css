@@ -1,0 +1,237 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*--------------------------------------------------------------
+>>> CSS STANDARDS
+----------------------------------------------------------------
+1. Place in appropriate section
+2. Add new sections to the Table of Contents as needed
+3. Order properties consistently inside each declaration i.e. alphabetically or by function 
+4. Declaration selectors should each occupy a new line
+5. Enter one new line between rules
+6. Enter more than one new line between categories 
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Settings: used with preprocessors and contain font, colors definitions, etc.
+2.0 - Tools: globally used mixins and functions. Use for preprocessor only.
+3.0 - Generic: reset and/or normalize styles, box-sizing definition, etc. 
+4.0 - Elements: styling for bare/generic HTML elements 
+        - Forms
+        - Lists
+        - Media
+        - Tables
+        - Typography: Headings, Paragraphs, Blockquotes, Anchors
+5.0 - Objects: class-based selectors which define undecorated design patterns, building blocks
+        - Framework
+6.0 - Components: specific designed components
+        - Buttons
+        - Header
+        - Navigation 
+7.0 - Utilities: utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
+        - Alignment	    
+        - Color
+        - Size
+
+--------------------------------------------------------------*/
+*{
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family:futura;
+}
+
+
+/*--------------------------------------------------------------
+4.0 - ELEMENTS 
+-------------------------------------------------------------- */
+
+/* -- FORMS -- */ 
+
+legend{
+	display: none;
+}
+
+label {
+	display: block;
+}
+fieldset{
+	border: none;
+}
+
+/* -- LISTS -- */
+ul{
+	text-align: right;
+}
+
+li{
+	display: inline-block;
+	padding-right: 1.5em;
+}
+
+
+/* -- MEDIA -- */
+#hero{
+	background: url("../img/hero-image.jpg") no-repeat center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding-top: 1em;
+	padding-bottom: 5em;
+}
+
+
+/* -- TYPOGRAPHY -- */
+html{
+	font-size: 1.2rem;
+}
+h1,h2,h3{
+	text-transform:uppercase;
+}
+
+h2{
+	font-weight: 700;
+	padding-bottom: 1em;
+}
+
+h3{
+	font-size: 1.1rem;
+	font-weight:600;
+}
+
+h1{
+	font-size: .9rem;
+	padding-top: .8em;
+}
+
+h2, #about, #why{
+	text-align: center;
+	margin: 0 auto;
+}
+
+p{
+	line-height: 1.5em;
+}
+
+#hero > p{
+	font-size: 5rem;
+}
+
+#hero > header > p:nth-child(2){
+	font-size: 1.7rem;
+	font-weight: 600;
+	text-transform:uppercase;
+}
+
+#hero > header > p:nth-child(3){
+	font-size: 1.3rem;
+}
+
+
+@media only screen and (min-width: 1024px){
+	#hero > header > p:nth-child(2){
+	padding-top: 2em;
+}
+}
+/*--------------------------------------------------------------
+4.0 - OBJECTS 
+-------------------------------------------------------------- */
+
+/* -- FRAMEWORK -- */
+.wrapper{
+	margin: 0 auto;
+}
+
+.hide{
+	display:none;
+}
+
+#why, #connect, #about, #services{
+	padding-top: 3em;
+	padding-bottom: 3em;
+}
+
+#why > div:nth-child(2)> section, #why > div:nth-child(3)> section{
+	background-color: #135bea;
+	border-radius: 1em;
+	color: #fff;
+	padding: 1em;
+	
+}
+
+#confrences div{
+	background-color: #fff;
+	border-radius: 1em;
+}
+
+/*--------------------------------------------------------------
+6.0 - COMPONENTS 
+-------------------------------------------------------------- */
+
+/* -- NAVIGATION -- */
+li a:hover{
+	color:#135bea; 
+}
+
+#services a{
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: .9rem;
+}
+
+#services a:hover{
+	text-decoration:underline;
+}
+
+
+/* -- BUTTONS -- */
+#hero > header > p:nth-child(5) > a, #connect > div > div > section:nth-child(1) > section > form > p > a{
+	background-color:#C1C1C1;
+	padding-top: .4em;
+	padding-bottom: .4em;
+	padding-left: 1.3em;
+	padding-right: 1.3em;
+	border-radius: .5em;
+	color: #135bea;
+	text-decoration: none;
+}
+
+#hero > header > p:nth-child(5) > a:hover, #connect > div > div > section:nth-child(1) > section > form > p > a:hover{
+	background-color:#135bea;
+	color: #fff;
+}
+
+/*--------------------------------------------------------------
+7.0 - UTILITIES
+-------------------------------------------------------------- */
+
+/* -- ALIGNMENTS -- */
+.txt-center{
+	text-align: center;
+}
+
+/* -- COLOR -- */
+
+#services, footer{
+	background-color: #135bea;
+}
+
+h1{
+	color: #135bea;
+}
+
+#about, #connect{
+	background-color:#F2F2F2;
+}
+
+#services{
+	color: #fff;
+}
