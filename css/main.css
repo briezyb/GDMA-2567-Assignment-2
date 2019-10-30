@@ -170,6 +170,32 @@ p{
 	border-radius: 1em;
 }
 
+footer{
+	padding: 1em 0;
+}
+
+footer li:first-child a{
+	background: url("../img/facebook-sprite.png") no-repeat;
+	background-position: top;
+	display: inline-block;
+	width: 45px;
+	height:45px;
+	
+}
+
+footer li:first-child a:hover{
+	background: url("../img/facebook-sprite.png") no-repeat;
+	background-position: bottom;
+	display: inline-block;
+	width: 45px;
+	height:45px;
+	
+}
+
+footer span{
+	display:none;
+}
+
 /*--------------------------------------------------------------
 6.0 - COMPONENTS 
 -------------------------------------------------------------- */
@@ -177,6 +203,11 @@ p{
 /* -- NAVIGATION -- */
 li a:hover{
 	color:#135bea; 
+}
+
+li a{
+	color: #000;
+	text-decoration: none;
 }
 
 #services a{
@@ -212,7 +243,9 @@ li a:hover{
 /*--------------------------------------------------------------
 7.0 - UTILITIES
 -------------------------------------------------------------- */
-
+.txt-right{
+	text-align: right;
+}
 /* -- ALIGNMENTS -- */
 .txt-center{
 	text-align: center;
